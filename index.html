@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <title>Team Lose</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Bienvenue sur Team Lose 🎉</h1>
-  <p>Bande de looser.</p>
+  <header>
+    <h1>Team Lose</h1>
+  </header>
+
+  <section id="classement">
+    <h2>Classement des Loosers</h2>
+    <div id="graphe"></div> <!-- Graphique évolutif ou tableau -->
+  </section>
+
+  <section id="annonces">
+    <h2>Nouvel Acte</h2>
+    <form id="form-acte">
+      <label for="membre">Membre :</label>
+      <select id="membre">
+        <option value="grand_loser_suprême">Grand Loser Suprême</option>
+        <option value="loser_adj">Loser Adjoint</option>
+        <option value="loser3">Loser 3</option>
+        <option value="loser4">Loser 4</option>
+        <option value="bruno_scout">Bruno Scout</option>
+      </select>
+
+      <label for="description">Description de l'acte :</label>
+      <textarea id="description"></textarea>
+
+      <label for="points">Points proposés :</label>
+      <input type="number" id="points">
+
+      <button type="submit">Proposer l'acte</button>
+    </form>
+
+    <h3>Actes en attente de validation</h3>
+    <div id="actes-en-attente"></div>
+  </section>
+
+  <script src="firebase-config.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
